@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Receitas</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Esta tag serve para importar o Tailwind CSS na sua página web de forma rápida e prática, direto via CDN (Content Delivery Network). -->
+    
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style> 
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900"> <!--Este comando HTML e CSS significa que a página terá um fundo cinza claro e texto cinza escuro.-->
+    <!-- Cabeçalho da Página -->
+    <header class="bg-gray-900 text-white p-6 shadow-lg rounded-b-lg">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-center"> <!-- Alterado para 'justify-center' para centralizar o conteúdo -->
+            <!-- Agrupamento para o Ícone e Título (Centralizado) -->
+            <div class="flex items-center mb-4 sm:mb-0">
+                <div class="text-4xl mr-4">
+                    <i class="fas fa-utensils"></i> <!-- Ícone de utensílios (faca e garfo) -->
+                </div>
+                <!-- Título da Página -->
+                <h1 class="text-4xl font-bold text-center sm:text-left">
+                    Minhas Receitas Deliciosas
+                </h1>
+            </div>
+            <nav class="mt-4 sm:mt-0">
+                <!-- Conteúdo de navegação futuro aqui -->
+            </nav>
+        </div>
+    </header>
+    <section class="container mx-auto mt-8 p-4 flex justify-center">
+        <div class="w-full max-w-lg flex bg-white rounded-full shadow-md overflow-hidden">
+            <input
+                type="text"
+                placeholder="Pesquisar receitas..."
+                class="flex-grow p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-l-full pl-5">
+                <button class="bg-orange-500 hover:bg-orange-600 text-white p-3 px-6 rounded-r-full transition duration-300 ease-in-out flex items-center justify-center">
+                    <i class="fas fa-search mr-2"></i>Pesquisar
+                </button>
+        </div>
+    </section>
+    <!-- Start: conteudo principal da página com containers de receitas -->
+    <main class="container mx-auto p-6 mt-8 bg-white rounded-lg shadow-md"></main>
+        <!-- Titulo da seção de Receitas -->
+            <h2 class="text-2xl font-semibold mb-6 text-center">Nossas últimas Receitas</h2>
+            <!-- container flexivel para as receitas -->
+            <div class="flex flex-wrap justify-center gap 6">
+              
+            <!-- Receita 1 -->
+            <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl font-bold mb-2 text-gray-800"> Receita de Bolo de Chocolate</h3>
+                <p class="text-gray-600 mb-4"> Um bolo classico, úmido e delicioso, perfeito para qualquer ocasião.</p>
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold">Ver receita &rarr;</a>
+            </div>
+
+            <!-- Receita 2 -->
+            <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl font-bold mb-2 text-gray-800"> Frango Assado com Ervas</h3>
+                <p class="text-gray-600 mb-4"> Uma receita simples e saborosa de frango assado com um toque de ervas frescas.</p>
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold">Ver receita &rarr;</a>
+            </div>
+
+            <!-- Receita 3 -->
+            <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl font-bold mb-2 text-gray-800"> Salada Mediterrânea Fresca</h3>
+                <p class="text-gray-600 mb-4"> Uma salada leve refrescante, cheia de sabores do Mediterrâneo.</p>
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold">Ver receita &rarr;</a>
+            </div>
+
+            <!-- Receita 4 -->
+            <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl font-bold mb-2 text-gray-800"> Frango Assado com Ervas</h3>
+                <p class="text-gray-600 mb-4"> Uma receita simples e saborosa de frango assado com um toque de ervas frescas.</p>
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold">Ver receita &rarr;</a>
+            </div>
+
+            <!-- Receita 5 -->
+            <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl font-bold mb-2 text-gray-800"> Frango Assado com Ervas</h3>
+                <p class="text-gray-600 mb-4"> Uma receita simples e saborosa de frango assado com um toque de ervas frescas.</p>
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold">Ver receita &rarr;</a>
+            </div>
+
+            <!-- Receita 6 -->
+            <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl font-bold mb-2 text-gray-800"> Frango Assado com Ervas</h3>
+                <p class="text-gray-600 mb-4"> Uma receita simples e saborosa de frango assado com um toque de ervas frescas.</p>
+                <a href="#" class="text-orange-600 hover:text-orange-800 font-semibold">Ver receita &rarr;</a>
+            </div>
+        <!-- Adicione mais cards de receitas conforme necessário -->
+         
+    <!-- Conteúdo Principal da Página -->
+    <main class="container mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Bem-vindo à sua página de receitas!</h2>
+        <p class="text-lg text-gray-700">Aqui você poderá organizar e compartilhar suas receitas favoritas.</p>
+        <p class="mt-4 text-gray-600">Este é o início da sua jornada culinária com Django.</p>
+    </main>
+    <!-- Rodapé (opcional, para futuras adições) -->
+    <footer class="mt-12 p-6 text-center text-gray-600">
+        <p>&copy; 2025 Minhas Receitas. Todos os direitos reservados a Antonio.</p>
+    </footer>
+</body>
+</html>
