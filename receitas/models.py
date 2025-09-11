@@ -1,15 +1,26 @@
 from django.db import models
 
 class Receita(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    ingredients = models.TextField()
-    instructions = models.TextField()
+
+    CATEGORIAS = [
+    ('comida', 'Comida'),
+    ('sobremesa', 'Sobremesa'),
+    ('drink', 'Drink'),
+]
+
+    title = models.CharField("Título",max_length=200)
+    description = models.TextField("Descrição")
+    ingredients = models.TextField("Ingredientes")
+    instructions = models.TextField("Mod de Preparo")
+
     #campo para imagem da receita
-    image = models.ImageField(upload_to='receitas_images/', blank=True, null=True)
-    data_publicacao = models.DateTimeField(auto_now_add=True)
+
+    image = models.ImageField("Imagem",upload_to='receitas_images/', blank=True, null=True)
+
+    categoria = models.CharField("Categoria", max_length=20, choices=CATEGORIAS, default='comida')
 
     created_at = models.DateTimeField(auto_now_add=True)
+
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):

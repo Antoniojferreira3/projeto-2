@@ -3,12 +3,26 @@ from django.shortcuts import render, get_object_or_404
 from .models import Receita
 
 def home(request):
-    # Pega todas as receitas do banco
- 
-        receitas = Receita.objects.all()
+        # Obtém uma categoria do parâmetro da URL (ex: /?categoria=drink)
+        categoria_slug = request.GET.get('categoria')
 
-    # Envia o dicionário {'receitas': receitas} para o template
-        return render(request, 'receitas/home.html', {'receitas': receitas})
+        categorias_choices = [choice[0] for choice in Receita.CATEGORIAS]
+
+        if categoria_slug:
+        #Se uma categoria for selecionada, filtra as receitas
+            receitas = Receita.objects.filter(categoria=categoria_slug)
+        # Passa a categoria selecionada para o template, útil para destacar o limk do menu
+            categoria_selecionada = categoria_slug
+            
+        else:
+            receitas = Receita.objects.all()
+            categoria_selecionada = None
+    
+        return render(request, 'receitas/home.html', {
+            'receitas': receitas,
+            'categorias': categorias_choices,
+            'categoria_selecionada': categoria_selecionada,})
+# Você pode passar 'pesquis' aqui também se quiser unificar tudo
 
 def receita_detail(request, id):
     # Busca a receita pelo ID ou retorna um erro 404 se não existir
