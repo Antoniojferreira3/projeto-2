@@ -11,7 +11,7 @@ class Receita(models.Model):
     title = models.CharField("Título",max_length=200)
     description = models.TextField("Descrição")
     ingredients = models.TextField("Ingredientes")
-    instructions = models.TextField("Mod de Preparo")
+    instructions = models.TextField("Modo de Preparo")
 
     #campo para imagem da receita
 
