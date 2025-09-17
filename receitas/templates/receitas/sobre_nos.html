@@ -1,0 +1,30 @@
+{%extends 'receitas/base.html' %}
+
+{% block content %}
+<div class="container mx-auto mt-8 p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
+        <div class="p-8 text-center bg-gray-100 dark:bg-gray-700">
+            <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">Sobre Nós</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Bem-vindo ao nosso site de receitas! Somos apaixonados por culinária
+                 e adoramos compartilhar nossas receitas favoritas com você. Nossa missão é inspirar você a cozinhar pratos deliciosos e saudáveis em casa.</p>
+        </div>
+        <div class="p-8 lg:p-12 grid lg-grid-cols-2 gap-8 items-center">
+            <div class="text-gray-600 dark:text-gray-300 space-y-4">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Nossa Paixão, Nossa Missâo</h2>
+                <p>Nossa equipe é composta por chefs experientes e entusiastas da culinária que dedicam seu tempo para criar receitas incríveis. 
+                    Acreditamos que cozinhar deve ser uma experiência divertida e gratificante, e estamos aqui para ajudar você a alcançar isso.</p>
+                <p>Além de receitas, oferecemos dicas de cozinha, técnicas culinárias e sugestões de ingredientes para tornar sua jornada na cozinha ainda mais agradável.</p>
+               <p>Agradecemos por visitar nosso site e esperamos que você encontre inspiração para suas próximas aventuras culinárias!</p>
+            </div>
+        <div>
+             <div class="p-8 lg:p-12 text-center bg-gray-50 dark:bg-gray-700">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Junte-se à Nossa Comunidade</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-3xl mx-auto">Compartilhe suas experiências, suas dicas e criações. Vamos juntos embarcar
+                         nessa jornada deliciosa, onde cada receita é uma nova aventura e cada prato uma nova descoberta.</p>
+                    <a href="{% url 'home' %}" class="inline-block bg-orange-500 text-white font-bold py3 px-6 rounded-full shadow-lg hover:bg-orange-600
+                     transition-colors duration-300 transform hover:-translate-y-1">Explore Nossas Receitas</a>
+            </div>
+        </div>
+    </div>
+        {% endblock %}
+                  
